@@ -1,9 +1,13 @@
 package com.ehrform.dao;
+import java.util.List;
+import com.ehrform.entity.Patient;
 
-public class PatientDao {
+public interface PatientDao {
 
-	public PatientDao() {
-		// TODO Auto-generated constructor stub
-	}
-
+		public void addPatient(Patient patient);
+		public Patient getPatient(int id);
+		public List<Patient> getPatient();
+	
 }
+
+
