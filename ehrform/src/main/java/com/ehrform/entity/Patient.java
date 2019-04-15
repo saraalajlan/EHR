@@ -15,22 +15,38 @@ import java.util.Date;
  *
  */
 @Entity
-@Table(name="PATIENT")
+@Table(name="patient")
 
 public class Patient {
 	@Id
-	@Column(name="id")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	
-	private int patientId;
+	@Column(name="patientId", updatable=false, nullable=false)
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int patientId; 
+
+	@Column(name="firstName" ,nullable=false )
 	private String firstName;
+	
+	@Column(name="secondName" ,nullable=false )
 	private String secondName;
+	
+	@Column(name="lastName" ,nullable=false )
 	private String lastName;
+	
+	@Column(name="age" ,nullable=false )
 	private int age;
+	
+	@Column(name="dateOfBirth" ,nullable=false )
 	private Date dateOfBirth;
+	
+	@Column(name="heartRate" ,nullable=false )
 	private int heartRate;
+	
+	@Column(name="temprature" ,nullable=false )
 	private int temprature;
+	
+	@Column(name="bloodPressure" ,nullable=false )
 	private String bloodPressure;
+	
 
 	public int getPatientId() {
 		return patientId;
