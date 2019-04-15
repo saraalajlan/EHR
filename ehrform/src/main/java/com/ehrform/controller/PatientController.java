@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.ehrform.entity.Patient;
 import com.ehrform.service.PatientService;
-import com.ehrform.model.Patient;
+/*import com.ehrform.entity.Patient;
 import com.ehrform.service.PatientService;
 
 @Controller
@@ -48,4 +48,4 @@ public class PatientController {
 		modelAndView.addObject("patients", patients);
 		
 		return modelAndView;
-	}
+	} */
