@@ -16,18 +16,14 @@ import com.ehrform.entity.Patient;
 		private PatientDao patientDao;
 
 		public void addPatient(Patient patient) {
-			patientDao.addPatient(patient);		
-		}
+			patientDao.addPatient(patient);}
 
 
 		public Patient getPatient(int id) {
-			return patientDao.getPatient(id);
-		}
-
-
+			return patientDao.getPatient(id);}
+		
 		public List<Patient> getPatient() {
-			return patientDao.getPatient();
-		}
+			return patientDao.getPatient();		}
 
 	} 
 
