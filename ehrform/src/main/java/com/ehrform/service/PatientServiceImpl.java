@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.ehrform.dao.PatientDao;
 import com.ehrform.entity.Patient;
-/*
+
 @Service
 @Transactional
   public class PatientServiceImpl implements PatientService{
@@ -29,6 +29,6 @@ import com.ehrform.entity.Patient;
 			return teamDAO.getPatient();
 		}
 
-	} */
+	} 
 
 
