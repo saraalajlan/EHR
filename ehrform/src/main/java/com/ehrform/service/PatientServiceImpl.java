@@ -13,20 +13,20 @@ import com.ehrform.entity.Patient;
   public class PatientServiceImpl implements PatientService{
 			
 		@Autowired
-		private patientDao PatientDao;
+		private PatientDao patientDao;
 
 		public void addPatient(Patient patient) {
-			patientDao.addPateint(patient);		
+			patientDao.addPatient(patient);		
 		}
 
 
-		public Patient getTeam(int id) {
+		public Patient getPatient(int id) {
 			return patientDao.getPatient(id);
 		}
 
 
 		public List<Patient> getPatient() {
-			return teamDAO.getPatient();
+			return patientDao.getPatient();
 		}
 
 	} 
