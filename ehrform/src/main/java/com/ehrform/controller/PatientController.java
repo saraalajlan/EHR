@@ -44,7 +44,7 @@ public class PatientController {
 	public ModelAndView listOfPatients() {
 		ModelAndView modelAndView = new ModelAndView("list-of-patients");
 		
-		List<Patient> patients = patientService.getPatients();
+		List<Patient> patients = patientService.getPatient();
 		modelAndView.addObject("patients", patients);
 		
 		return modelAndView;
