@@ -21,17 +21,17 @@ public class PatientController {
 	@Autowired
 	private PatientService patientService;
 	
-	@RequestMapping(value="/add", method=RequestMethod.GET)
-	public ModelAndView addPatientPage() {
-		ModelAndView modelAndView = new ModelAndView("add-patient-form");
-		modelAndView.addObject("patient", new Patient());
+	@RequestMapping(method=RequestMethod.GET)
+	public ModelAndView home() {
+		ModelAndView modelAndView = new ModelAndView("home");
+		//modelAndView.addObject("patient", new Patient());
 		return modelAndView;
 }
 
 	@RequestMapping(value="/add", method=RequestMethod.POST)
 	public ModelAndView addingPatient(@ModelAttribute Patient patient) {
 		
-		ModelAndView modelAndView = new ModelAndView("home");
+		ModelAndView modelAndView = new ModelAndView("");
 		patientService.addPatient(patient);
 		
 		String message = "Pateint was successfully added.";
