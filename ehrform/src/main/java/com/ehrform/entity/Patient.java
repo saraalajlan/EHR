@@ -35,14 +35,14 @@ public class Patient {
 	@Column(name="age" ,nullable=false )
 	private int age;
 	
-	@Column(name="dateOfBirth" ,nullable=false )
+	@Column(name="DOB" ,nullable=false )
 	private Date dateOfBirth;
 	
 	@Column(name="heartRate" ,nullable=false )
 	private int heartRate;
 	
-	@Column(name="temprature" ,nullable=false )
-	private int temprature;
+	@Column(name="temperature" ,nullable=false )
+	private int temperature;
 	
 	@Column(name="bloodPressure" ,nullable=false )
 	private String bloodPressure;
@@ -105,12 +105,12 @@ public class Patient {
 		this.heartRate = heartRate;
 	}
 
-	public int getTemprature() {
-		return temprature;
+	public int getTemperature() {
+		return temperature;
 	}
 
-	public void setTemprature(int temprature) {
-		this.temprature = temprature;
+	public void setTemperature(int temperature) {
+		this.temperature = temperature;
 	}
 
 	public String getBloodPressure() {
@@ -125,7 +125,7 @@ public class Patient {
 	public String toString() {
 		return "Patient [patientId=" + patientId + ", firstName=" + firstName + ", secondName=" + secondName
 				+ ", lastName=" + lastName + ", age=" + age + ", dateOfBirth=" + dateOfBirth + ", heartRate="
-				+ heartRate + ", temprature=" + temprature + ", bloodPressure=" + bloodPressure + "]";
+				+ heartRate + ", temprature=" + temperature + ", bloodPressure=" + bloodPressure + "]";
 	}
     
 	}
