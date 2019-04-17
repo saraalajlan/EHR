@@ -8,6 +8,7 @@
  <link href="style.css" rel="stylesheet">
 </head>
 <body>
+<<<<<<< HEAD
  <header class="homebg">
     <div class="container d-flex h-100 align-items-center">
       <div class="mx-auto text-center">
@@ -27,5 +28,15 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/grayscale.min.js"></script>
+=======
+ <header class="masthead">
+    <div >
+        <h1>WELCOME</h1>
+        <h2>To Electronic Health Record Application!</h2>
+        <img src="/img/icons8-add-user-group-man-man-filled-50.png"/>
+  
+    </div>
+  </header>
+>>>>>>> branch 'master' of https://github.com/saraalajlan/EHR
 </body>
 </html>
