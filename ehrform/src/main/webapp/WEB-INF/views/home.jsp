@@ -4,11 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<title>Insert title here</title>
+ <!-- Bootstrap -->
+   <!-- <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
 <title>Electronic Health Record</title>
  <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<<<<<<< HEAD
+<img src="/resources/img/icons8-list-filled-24.png"/>
+<img src="/resources/img/icons8-add-user-group-man-man-filled-50.png"/>
+
+
  <header class="homebg">
     <div class="container d-flex h-100 align-items-center">
       <div class="mx-auto text-center">
@@ -28,15 +34,13 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/grayscale.min.js"></script>
-=======
  <header class="masthead">
-    <div >
+    <div>
         <h1>WELCOME</h1>
         <h2>To Electronic Health Record Application!</h2>
-        <img src="/img/icons8-add-user-group-man-man-filled-50.png"/>
-  
+        <a href="patient/add">Add Patient</a>
+        <a href="patient/list">View Patients</a>
     </div>
   </header>
->>>>>>> branch 'master' of https://github.com/saraalajlan/EHR
 </body>
 </html>

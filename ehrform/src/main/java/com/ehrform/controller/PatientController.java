@@ -27,11 +27,17 @@ public class PatientController {
 		//modelAndView.addObject("patient", new Patient());
 		return modelAndView;
 }
+	@RequestMapping(value="/add", method=RequestMethod.GET)
+	public ModelAndView addPatientForm() {
+		ModelAndView modelAndView = new ModelAndView("add-patient-form");
+		modelAndView.addObject("patient", new Patient());
+		return modelAndView;
+}
 
-	@RequestMapping(value="/add", method=RequestMethod.POST)
+	@RequestMapping(value="/save", method=RequestMethod.POST)
 	public ModelAndView addingPatient(@ModelAttribute Patient patient) {
 		
-		ModelAndView modelAndView = new ModelAndView("");
+		ModelAndView modelAndView = new ModelAndView("add-patient-form");// we have Q
 		patientService.addPatient(patient);
 		
 		String message = "Pateint was successfully added.";

@@ -1,4 +1,5 @@
 package com.ehrform.service;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,21 +11,23 @@ import com.ehrform.entity.Patient;
 
 @Service
 @Transactional
-  public class PatientServiceImpl implements PatientService{
-			
-		@Autowired
-		private PatientDao patientDao;
+public class PatientServiceImpl implements PatientService {
 
-		public void addPatient(Patient patient) {
-			patientDao.addPatient(patient);}
+	@Autowired
+	private PatientDao patientDao;
 
+	public void addPatient(Patient patient) {
+		patientDao.addPatient(patient);
+	}
 
-		public Patient getPatient(int id) {
-			return patientDao.getPatient(id);}
+	public Patient getPatient(int id) {
+		return patientDao.getPatient(id);
+	}
+
+	public List<Patient> getPatient() {
+		List<Patient> patientsList = patientDao.getPatient();
 		
-		public List<Patient> getPatient() {
-			return patientDao.getPatient();		}
+		return patientsList;
+	}
 
-	} 
-
-
+}

@@ -31,7 +31,7 @@ public class PatientDaoImpl implements PatientDao{
 
 	@SuppressWarnings("unchecked")
 	public List<Patient> getPatient() {
-		return getCurrentSession().createQuery("from Patients").list();
+		return getCurrentSession().createQuery("from Patient").list();
 	}
 
 }
