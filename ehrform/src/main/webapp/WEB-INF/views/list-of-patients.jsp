@@ -9,18 +9,25 @@
 <body>
 <h1>List of Patients</h1>
 <p>Here you can see the list of the teams.</p>
-<table border="1px" cellpadding="0" cellspacing="0" >
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+<table border="1px" cellpadding="0" cellspacing="0"class="table table-hover" >
 <thead>
 <tr>
-<th width="10%">ID</th><th width="15%">First Name</th><th width="10%">Second Name</th>
-<th width="10%">Last Name</th> <th width="10%">Age</th> <th width="10%">Date of Birth</th> <th width="10%">Heart Rate</th>
-<th width="10%">Temperature</th> <th width="10%">Blood Pressure</th>
+<th width="10%" scope="col">ID</th>
+<th width="15%" scope="col">First Name</th>
+<th width="10%" scope="col">Second Name</th>
+<th width="10%" scope="col">Last Name</th> 
+<th width="10%" scope="col">Age</th> 
+<th width="10%" scope="col">Date of Birth</th> 
+<th width="10%" scope="col">Heart Rate</th>
+<th width="10%" scope="col">Temperature</th> 
+<th width="10%" scope="col">Blood Pressure</th>
 </tr>
 </thead>
 <tbody>
 <c:forEach var="patient" items="${patient}">
 <tr>
-	<td>${patient.patientId}</td>
+	<th scope="row">${patient.patientId}</th>
 	<td>${patient.firstName}</td>
 	<td>${patient.secondName}</td>
 	<td>${patient.lastName}</td>
@@ -33,7 +40,7 @@
 </c:forEach>
 </tbody>
 </table>
-
+</div>
 <!--  <p><a href="${pageContext.request.contextPath}/index.html">Home page</a></p> -->
 
 </body>
