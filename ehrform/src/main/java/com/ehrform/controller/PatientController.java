@@ -37,7 +37,7 @@ public class PatientController {
 	@RequestMapping(value="/save", method=RequestMethod.POST)
 	public ModelAndView addingPatient(@ModelAttribute Patient patient) {
 		
-		ModelAndView modelAndView = new ModelAndView("add-patient-form");// we have Q
+		ModelAndView modelAndView = new ModelAndView("add-patient-form");
 		patientService.addPatient(patient);
 		
 		String message = "Pateint was successfully added.";
