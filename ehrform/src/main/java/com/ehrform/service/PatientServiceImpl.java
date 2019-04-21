@@ -19,11 +19,17 @@ public class PatientServiceImpl implements PatientService {
 	public void addPatient(Patient patient) {
 		patientDao.addPatient(patient);
 	}
+	public void updatePatient(Patient patient) {
+		patientDao.updatePatient(patient);
+	}
 
 	public Patient getPatient(int id) {
 		return patientDao.getPatient(id);
 	}
-
+	
+	public void deletePatient(int id) {
+		patientDao.deletePatient(id);
+	}
 	public List<Patient> getPatient() {
 		List<Patient> patientsList = patientDao.getPatient();
 		
