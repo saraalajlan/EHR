@@ -8,39 +8,57 @@
  <!-- Bootstrap -->
    <!-- <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
 <title>Electronic Health Record</title>
- <link href="style.css" rel="stylesheet">
+<style>
+body{
+   text-align: center;
+   }
+   div{
+   margin: 100px auto;
+   padding:25px;
+    height:60vh;
+    width: 40vw;
+    box-shadow:1px 1px 8px rgba(0,0,0,0.2) ;
+}
+   h1{
+   margin-top: 40px;
+   font-size: 50px;
+   font-weight: lighter;
+   color:#19a0cc;
+   }
+   h4{
+   font-size: 20px;
+   font-weight: lighter;
+   color:#19a0cc;
+   }
+   
+   button{
+   border:none;
+   width: 25%;
+   padding: 25px;
+   color: white;
+   background-color: #19a0cc;
+   margin: 60px 40px;
+   border-radius: 10px;
+   font-weight: bold;
+   
+   }
+   button:hover{
+  box-shadow: 0 3px 10px 1px rgba(0,0,0,0.2);
+  cursor:pointer;
+   }
+</style>
 </head>
 <body>
-<img src="/resources/img/icons8-list-filled-24.png"/>
-<img src="/resources/img/icons8-add-user-group-man-man-filled-50.png"/>
+<link rel = "icon"
+      type = "image/png"
+      href="https://image.flaticon.com/icons/svg/387/387561.svg"
+      size= "32*32" >
 
-
- <header class="homebg">
-    <div class="container d-flex h-100 align-items-center">
-      <div class="mx-auto text-center">
-        <h1 class="mx-auto my-0 text-uppercase">WELCOME</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5">To Electronic Health Record Application!</h2>
-        <img src="icons8-add-user-group-man-man-filled-50.png" class="btn btn-primary js-scroll-trigger" />
-        <img src="icons8-list-filled-24.png" class="btn btn-primary js-scroll-trigger" />
-      </div>
-    </div>
-  </header>
- <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/grayscale.min.js"></script>
- <header class="masthead">
-    <div>
+<div>
         <h1>WELCOME</h1>
-        <h2>To Electronic Health Record Application!</h2>
-        <a href="patient/add">Add Patient</a>
-        <a href="patient/list">View Patients</a>
-    </div>
-  </header>
+        <h4>To Electronic Health Record Application!</h4>
+        <button onclick="location.href='patient/add'">Add Patient</button>
+        <button onclick="location.href='patient/list'">View Patients</button>  
+</div>
 </body>
 </html>
