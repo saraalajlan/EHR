@@ -62,12 +62,12 @@ background-color:#f5f5f5;
 	<td>${patient.heartRate}</td>
 	<td>${patient.temperature}</td>
 	<td>${patient.bloodPressure}</td>
+	<td> <a href="${pageContext.request.contextPath}/patient/edit/${patient.patientId}.html">Edit</a><br/>
+	<a href="${pageContext.request.contextPath}/patient/delete/${patient.patientId}.html">Delete</a><br/> </td>
 </tr>
 </c:forEach>
 </tbody>
 </table>
-
-<!--  <p><a href="${pageContext.request.contextPath}/index.html">Home page</a></p> -->
 
 </body>
 </html>
