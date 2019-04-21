@@ -27,9 +27,14 @@ public class PatientController {
 		//modelAndView.addObject("patient", new Patient());
 		return modelAndView;
 }
-	@RequestMapping(value="/add", method=RequestMethod.GET)
+	
+	@RequestMapping(value={"/add","list"},method=RequestMethod.GET)
 	public ModelAndView addPatientForm() {
+		//if(value=="add")
 		ModelAndView modelAndView = new ModelAndView("add-patient-form");
+		//else
+		ModelAndView modelAndView = new ModelAndView("list-of-patients");
+	
 		modelAndView.addObject("patient", new Patient());
 		return modelAndView;
 }
@@ -46,13 +51,13 @@ public class PatientController {
 		return modelAndView;
 	}
 	
-	@RequestMapping(value="/list")
-	public ModelAndView listOfPatients() {
-		ModelAndView modelAndView = new ModelAndView("list-of-patients");
+	//@RequestMapping(value="/list")
+	//public ModelAndView listOfPatients() {
+		//ModelAndView modelAndView = new ModelAndView("list-of-patients");
 		
-		List<Patient> patients = patientService.getPatient();
-		modelAndView.addObject("patients", patients);
+		//List<Patient> patients = patientService.getPatient();
+		//modelAndView.addObject("patients", patients);
 		
-		return modelAndView;
-	} 
+		//return modelAndView;
+	//} 
 }
