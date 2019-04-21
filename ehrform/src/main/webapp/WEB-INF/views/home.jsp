@@ -49,16 +49,13 @@ body{
 </style>
 </head>
 <body>
-<link rel = "icon"
-      type = "image/png"
-      href="https://image.flaticon.com/icons/svg/387/387561.svg"
-      size= "32*32" >
+
 
 <div>
         <h1>WELCOME</h1>
         <h4>To Electronic Health Record Application!</h4>
         <button onclick="location.href='patient/add'">Add Patient</button>
-        <button onclick="location.href='patient/list'">View Patients</button>  
+        <button onclick="location.href='patient/add'">View Patients</button>  
 </div>
 </body>
 </html>

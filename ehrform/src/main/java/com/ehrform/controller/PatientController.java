@@ -27,9 +27,11 @@ public class PatientController {
 		//modelAndView.addObject("patient", new Patient());
 		return modelAndView;
 }
-	@RequestMapping(value="/add", method=RequestMethod.GET)
+	
+	@RequestMapping(value="/add",method=RequestMethod.GET)
 	public ModelAndView addPatientForm() {
 		ModelAndView modelAndView = new ModelAndView("add-patient-form");
+	
 		modelAndView.addObject("patient", new Patient());
 		return modelAndView;
 }
@@ -56,13 +58,14 @@ public class PatientController {
 		patientService.deletePatient(id);
 		return modelAndView;
 	}
+
 	
 	@RequestMapping(value="/list")
 	public ModelAndView listOfPatients() {
-		
-		ModelAndView modelAndView = new ModelAndView("list-of-patients");
-		List<Patient> patients = patientService.getPatient();
-		modelAndView.addObject("patients", patients);
-		return modelAndView;
+
+	ModelAndView modelAndView = new ModelAndView("list-of-patients");
+	List<Patient> patients = patientService.getPatient();
+	modelAndView.addObject("patients", patients);
+	return modelAndView;
 	} 
 }
