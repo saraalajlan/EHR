@@ -48,6 +48,7 @@ background-color:#f5f5f5;
 <th>Heart Rate</th>
 <th>Temperature</th> 
 <th>Blood Pressure</th>
+<th>Actions</th>
 </tr>
 </thead>
 <tbody>
