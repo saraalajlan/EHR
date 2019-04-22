@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -22,6 +23,11 @@ thead{
     background-color: #19a0cc;
     color: white;
    }
+  p{
+    width:5vw;
+    font-size: 30px;
+    margin-left: 20VW;
+    }
 
 th, td {
   padding: 12px;
@@ -31,7 +37,10 @@ th, td {
 tbody tr:hover {
 background-color:#f5f5f5;
 }
-
+p:hover{
+color:#19a0cc;
+cursor:pointer;
+}
 </style>
 </head>
 <body>
@@ -59,7 +68,8 @@ background-color:#f5f5f5;
 	<td>${patient.secondName}</td>
 	<td>${patient.lastName}</td>
 	<td>${patient.age}</td>
-	<td>${patient.dateOfBirth}</td>
+	<fmt:formatDate type="date" value="${patient.dateOfBirth}" pattern="dd/MM/yyyy" var="Dob"/>
+	<td>${Dob}</td>
 	<td>${patient.heartRate}</td>
 	<td>${patient.temperature}</td>
 	<td>${patient.bloodPressure}</td>
@@ -69,6 +79,11 @@ background-color:#f5f5f5;
 </c:forEach>
 </tbody>
 </table>
-
+<p onclick="goBack()">&#x21A9;</p>
+<script>
+function goBack(){
+	window.history.back();
+}
+</script>
 </body>
 </html>
