@@ -2,12 +2,18 @@ package com.ehrform.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ehrform.entity.Patient;
@@ -44,17 +50,17 @@ public class PatientController {
 		return modelAndView;
 	}
 	
-	@RequestMapping(value="/edit/{id}", method=RequestMethod.POST)
-	public ModelAndView edditingTeam(@ModelAttribute Patient patient, @PathVariable Integer id) {
+	@RequestMapping(value="/edit", method = RequestMethod.POST)
+	public @ResponseBody String edditingTeam(@RequestBody Patient patient, HttpServletRequest request, HttpServletResponse response) {
 	
-		ModelAndView modelAndView = new ModelAndView("add-patient-form");
+		//ModelAndView modelAndView = new ModelAndView("list-of-patients");
 		patientService.updatePatient(patient);		
-		return modelAndView;
+		return "Success!!";
 	}
 	
-	@RequestMapping(value="/delete/{id}", method=RequestMethod.GET)
+	@RequestMapping(value="/delete/{id}", method=RequestMethod.DELETE)
 	public ModelAndView deletePatient(@PathVariable Integer id) {
-		ModelAndView modelAndView = new ModelAndView("add-patient-form");
+		ModelAndView modelAndView = new ModelAndView("list-of-patients");
 		patientService.deletePatient(id);
 		return modelAndView;
 	}

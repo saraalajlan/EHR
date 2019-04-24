@@ -19,6 +19,7 @@ public class PatientServiceImpl implements PatientService {
 	public void addPatient(Patient patient) {
 		patientDao.addPatient(patient);
 	}
+	
 	public void updatePatient(Patient patient) {
 		patientDao.updatePatient(patient);
 	}
