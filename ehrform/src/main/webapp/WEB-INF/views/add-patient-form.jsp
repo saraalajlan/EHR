@@ -34,13 +34,13 @@
       <body>
 	 <c:url var="addAction" value="/patient/save" ></c:url> 
 				
-       <form:form  id="patientForm" action="${addAction}" commandName="patient" >
+       <form:form  id="patientForm" action="${addAction}" commandName="patient">
 		     <p class="h4 mb-4 text-center" style = " color : blue " >Patient Information</p>
 		     <br/><br/>	
 		     <center>
 		     <table>	  
 		    <tr>
-		    <td><form:label path="firstName" class="control-lable col-md-9" > First Name: </form:label> </td>
+		    <td><form:label path="firstName" class="control-lable col-sm-9" > First Name: </form:label> </td>
 		    <td><form:input path="firstName" type="text" id="defaultFormFirstName"  class="form-control" placeholder="First name"/><span id="errfirstname" style = " color : red ">This field is required</span><td>
 			</tr>
 			

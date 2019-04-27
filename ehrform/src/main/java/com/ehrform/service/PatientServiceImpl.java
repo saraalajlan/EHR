@@ -8,6 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.ehrform.dao.PatientDao;
 import com.ehrform.entity.Patient;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 @Service
 @Transactional
@@ -20,7 +22,19 @@ public class PatientServiceImpl implements PatientService {
 		patientDao.addPatient(patient);
 	}
 	
-	public void updatePatient(Patient patient) {
+	public void updatePatient(String json) {
+		// Convert from JSON to Object
+		Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy").create();
+		
+		Patient patient = null;
+		
+		try{
+		patient = gson.fromJson(json, Patient.class);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
 		patientDao.updatePatient(patient);
 	}
 

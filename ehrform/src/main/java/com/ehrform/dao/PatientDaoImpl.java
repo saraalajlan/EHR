@@ -28,7 +28,7 @@ public class PatientDaoImpl implements PatientDao{
 	}
 	
 	public void deletePatient(int id) {
-		Patient patient = getPatient(id);
+	  Patient patient = getPatient(id);
 		if (patient != null)
 			getCurrentSession().delete(patient);
 	}

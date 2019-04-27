@@ -43,27 +43,28 @@ public class PatientController {
 }
 
 	@RequestMapping(value="/save", method=RequestMethod.POST)
-	public ModelAndView addingPatient(@ModelAttribute Patient patient) {
-		
-		ModelAndView modelAndView = new ModelAndView("add-patient-form");
+	public String addingPatient(@ModelAttribute Patient patient) {
+		//ModelAndView modelAndView = new ModelAndView("list-of-patients");
 		patientService.addPatient(patient);
-		return modelAndView;
+		return "redirect:list";
 	}
 	
 	@RequestMapping(value="/edit", method = RequestMethod.POST)
-	public @ResponseBody String edditingTeam(@RequestBody Patient patient, HttpServletRequest request, HttpServletResponse response) {
-	
-		//ModelAndView modelAndView = new ModelAndView("list-of-patients");
-		patientService.updatePatient(patient);		
+	@ResponseBody
+	public String editPatient(@RequestBody String jsonData) {
+		System.out.println("Json Data ====> " + jsonData);
+		patientService.updatePatient(jsonData);		
 		return "Success!!";
+		
 	}
 	
-	@RequestMapping(value="/delete/{id}", method=RequestMethod.DELETE)
-	public ModelAndView deletePatient(@PathVariable Integer id) {
-		ModelAndView modelAndView = new ModelAndView("list-of-patients");
+	@RequestMapping(value="/delete/{id}", method=RequestMethod.GET)
+	public String deletePatient(@PathVariable Integer id) {
+	//	ModelAndView modelAndView = new ModelAndView("add-patient-form");
 		patientService.deletePatient(id);
-		return modelAndView;
+		 return "redirect:/patient/list";
 	}
+	
 
 	
 	@RequestMapping(value="/list")
