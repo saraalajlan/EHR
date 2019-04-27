@@ -1,0 +1,180 @@
+body{
+	margin: 0;
+}
+<!-- Home Page style -->
+
+
+#homePage {
+	background-image: url("<c:url value='/resources/img/bg.jpg'/>");
+	background-repeat: no-repeat;
+	background-size: 100vw 100vh;
+}
+#homeLogo {
+    width: 100px;
+    height: 80px;
+    margin: 10px;
+}
+
+#intro {
+	margin-left: 70px;
+}
+
+#intro h1 {
+	margin-top: 30px;
+	font-size: 50px;
+	font-weight: bold;
+	color: #19a0cc;
+	font-family: sans-serif;
+}
+
+#intro h4 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #19a0cc;
+	font-family: sans-serif;
+}
+
+#intro button {
+	border: none;
+	width: 15vw;
+	height: 15vh;
+	padding: 10px;
+	color: #8a8d8e;
+	background-color: white;
+	margin: 60px 20px;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+#listImg {
+	width: 50px;
+}
+
+#intro button:hover {
+	box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	width: 20vw;
+	height: 20vh;
+	animation-direction: 1.4s;
+	animation-name: bounceInUp;
+}
+
+<!-- listOfPatient Page style -->
+
+#listOfPatient {
+	text-align: center;
+    margin: 0;
+}
+
+#myTable {
+	width: 60%;
+	margin: 90px auto;
+	border-collapse: collapse;
+}
+
+#listOfPatient h1 {
+	margin-top: 70px;
+    text-align: center;
+    font-family: sans-serif;
+    
+}
+
+#myTable thead {
+    background-image: linear-gradient(to left,#2668a2,#19a0cc);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#arrow {
+	width: 5vw;
+	font-size: 30px;
+	margin-left: 20VW;
+}
+
+#myTable th, td {
+	padding: 12px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+
+#myTable tbody tr:hover {
+	background-color: #f5f5f5;
+}
+
+#arrow:hover {
+	color: #19a0cc;
+	cursor: pointer;
+}
+
+#myTable img {
+	width: 20px;
+	margin: 0 2px;
+}
+#myTable img:hover{
+	cursor: pointer;
+}
+	
+#myTable input[type=text] {
+    font-family:inherit;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: 60px;
+}
+.header{
+ background-image: linear-gradient(to right,#2668a2,#19a0cc);
+    padding: 1em;
+    height: 70px;
+}
+ #listOfPatient ul{
+ float: right;
+ }
+#listOfPatient ul li{
+ display: inline-block;
+ list-style-type:none ;
+ margin: 15px;
+}
+#listOfPatient ul li a {
+    font-size: 18px;
+    font-weight: 300;
+    color: #ffff;
+    text-decoration: none;
+    padding: 0.5em;
+    font-family: sans-serif;
+}
+#listOfPatient ul li::after{ 
+    content: "";
+    height: 2px; 
+    background-color: #ffff;
+    display: none;
+    position: relative;
+    top:1.6em;
+}
+#listOfPatient ul li:hover::after{
+    cursor: pointer;
+    display: block;
+}
+.header_text {
+    color: #fff;
+    font-weight: bold;
+    float: left;
+    margin-top: 25px;
+    margin-left: 25px;
+    letter-spacing: 4px;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+.logo {
+    text-align: undefined;
+    width: 5%;
+    float: right;
+    margin-right: 25px;
+}
+
+ 
+
+    
+
+
+
+
