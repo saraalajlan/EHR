@@ -11,9 +11,10 @@ body{
 }
 #homeLogo {
     width: 100px;
-    height: 80px;
-    margin: 10px;
+    height: 100px;
+    margin: 30px 30px 0 40px;
 }
+
 
 #intro {
 	margin-left: 70px;
@@ -122,9 +123,11 @@ body{
     width: 60px;
 }
 .header{
- background-image: linear-gradient(to right,#2668a2,#19a0cc);
+ background-image: linear-gradient(to right,#2668a2,#6dc9e6);
     padding: 1em;
     height: 70px;
+    position: sticky;
+    top: 0;
 }
  #listOfPatient ul{
  float: right;
