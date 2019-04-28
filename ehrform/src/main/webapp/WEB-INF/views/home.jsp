@@ -1,61 +1,97 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+
+                pageEncoding="UTF-8"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+ 
+
 <!DOCTYPE html>
+
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
- <!-- Bootstrap -->
-   <!-- <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+
+<meta charset="UTF-8" />
+
+ 
+
 <title>Electronic Health Record</title>
+
+<link rel="stylesheet" type="text/css"
+
+                href="<c:url value='/resources/css/style.css'/>">
+
+ 
+
+<link rel="icon" type="image/png"
+
+                href="<c:url value='/resources/img/logoo.png'/>">
+
+<!--  -->
+
 <style>
-body{
-   text-align: center;
-   }
-   div{
-   margin: 100px auto;
-   padding:25px;
-    height:60vh;
-    width: 40vw;
-    box-shadow:1px 1px 8px rgba(0,0,0,0.2) ;
+
+#Logo {
+
+                width: 100px;
+
+                height: 80px;
+
+                margin: 10px;
+
 }
-   h1{
-   margin-top: 40px;
-   font-size: 50px;
-   font-weight: lighter;
-   color:#19a0cc;
-   }
-   h4{
-   font-size: 20px;
-   font-weight: lighter;
-   color:#19a0cc;
-   }
-   
-   button{
-   border:none;
-   width: 25%;
-   padding: 25px;
-   color: white;
-   background-color: #19a0cc;
-   margin: 60px 40px;
-   border-radius: 10px;
-   font-weight: bold;
-   
-   }
-   button:hover{
-  box-shadow: 0 3px 10px 1px rgba(0,0,0,0.2);
-  cursor:pointer;
-   }
+
+ 
+
+#homePage {
+
+                background-image: url("<c:url value='/resources/img/bg.jpg'/>");
+
+                background-repeat: no-repeat;
+
+                background-size: 100vw 100vh;
+
+}
+
 </style>
+
 </head>
-<body>
 
+<body id="homePage">
 
-<div>
-        <h1>WELCOME</h1>
-        <h4>To Electronic Health Record Application!</h4>
-        <button onclick="location.href='patient/add'">Add Patient</button>
-        <button onclick="location.href='patient/add'">View Patients</button>  
-</div>
+ 
+
+                <img id="homeLogo" src="<c:url value='/resources/img/logoo.png'/>">
+
+                <div id="intro">
+
+                                <h1>WELCOME</h1>
+
+                                <h4>To Electronic Health Record Application!</h4>
+
+                                <button onclick="location.href='patient/add'">
+
+                                                <img
+
+                                                                src="<c:url value='/resources/img/icons8-add-user-group-man-man-filled-50.png'/>">
+
+                                                <br />Add Patient
+
+                                </button>
+
+                                <button onclick="location.href='patient/list'">
+
+                                                <img id="listImg"
+
+                                                                src="<c:url value='/resources/img/icons8-list-filled-24.png'/>">
+
+                                                <br /> View Patients
+
+                                </button>
+
+                </div>
+
 </body>
+
 </html>

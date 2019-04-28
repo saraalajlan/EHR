@@ -47,7 +47,8 @@
 			<li><a href="${pageContext.request.contextPath}/patient">Home</a></li>
 			<li><a href="${pageContext.request.contextPath}/patient/add">Add Patient</a></li>
 		</ul>
-	</var> </header>
+	</var> 
+	</header>
 	<table id="myTable">
 		<thead>
 			<tr>
