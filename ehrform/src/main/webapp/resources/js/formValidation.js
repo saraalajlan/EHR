@@ -22,7 +22,7 @@ $(function() {
 	var errTemperature = false;
 	var errBloodpressure = false;
 
-	/*foucus out each input field*/
+	/foucus out each input field/
 	$("#defaultFormFirstName").focusout(function() {
 		checkFirstName();
 	});
@@ -49,7 +49,7 @@ $(function() {
 	});
 
 	
-	/*Validation functions*/
+	/Validation functions/
 	function checkFirstName() {	
 		var charPattren = /^[a-zA-Z]*$/;
 		var firstName = $("#defaultFormFirstName").val();
@@ -227,11 +227,11 @@ $(function() {
 	}
 	
 	
-   /*onclick action for add patient button*/
+   /onclick action for add patient button/
 	$('#btnAdd').click(function(){
 		if(errFname==false &&errSname==false&&errLname==false&&errAge==false&&errDob==false&&errHeartrate==false
 				&&errTemperature==false&&errBloodpressure ==false){
-               $("#alertSuccess").show();
+              // $("#alertSuccess").show();
 			   $("#patientForm").submit();
 		}else{
 			alert("Missing fields");

@@ -45,7 +45,7 @@
     
    
 </head>
-<header class="header">
+<header class="headerf">
  <h4 class="header_text">PATIENTS FORM</h4>
 	<img src="<c:url value='/resources/img/logoo.png'/>" width="50" class="logo" /> <var>
 		<ul>
@@ -67,8 +67,7 @@
 
         <div class="ehr-grid-form">
             <c:url var="addAction" value="/patient/save"></c:url>
-
-            <form:form id="patientForm" action="${addAction}" commandName="patient" class="form-group">
+            <form:form id="patientForm" action="${addAction}" commandName="patient" method="POST" class="form-group">
 
                 <div class="table-div">
                     <table>
@@ -116,7 +115,7 @@
                                 <form:label path="dateOfBirth" class="control-lable col-md"> Date: </form:label>
                             </td>
                             <td>
-                                <form:input path="dateOfBirth" type="date" name="dateofbirth" id="dateofbirth" class="form-control" placeholder="Date" /> 
+                                <form:input path="dateOfBirth" type="date" name="dateOfBirth" id="dateOfBirth" class="form-control" placeholder="Date" /> 
                                 <span id="errDob" class="errMsg" style="color: red"></span>
                             </td>
                         </tr>
@@ -154,14 +153,16 @@
                 </div>
                 <div class="btnDiv">
 
-                    <button id="btnClear" class="btn btn-info btn-lg-4" >Clear</button>
-                    <button id="btnAdd" class="btn btn-primary btn-lg-4">Add Patient</button>
+                    <button id="btnClear" type="button" class="btn btn-info btn-lg-4" >Clear</button>
+                    <button type="submit" id="btnAdd" class="btn btn-primary btn-lg-4">Add Patient</button>
                 </div>
 
             </form:form>
+            
+
         </div>
         <div class="ehr-grid-img">
-          <img id="ImgBg" src="<c:url value='/resources/img/EhrImg.png'/>" >
+          <!-- <img id="ImgBg" src="<c:url value='/resources/img/EhrImg.png'/>" >-->
         </div>
     </div>
 </body>

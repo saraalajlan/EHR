@@ -6,6 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 /**
@@ -35,6 +38,7 @@ public class Patient {
 	@Column(name="age" ,nullable=false )
 	private int age;
 	
+	@DateTimeFormat(pattern = "yyyy-MM-dd") 
 	@Column(name="DOB" ,nullable=false )
 	private Date dateOfBirth;
 	

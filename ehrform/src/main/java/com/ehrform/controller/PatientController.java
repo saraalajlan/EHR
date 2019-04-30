@@ -2,8 +2,6 @@ package com.ehrform.controller;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -46,8 +44,10 @@ public class PatientController {
 	public String addingPatient(@ModelAttribute Patient patient) {
 		//ModelAndView modelAndView = new ModelAndView("list-of-patients");
 		patientService.addPatient(patient);
-		return "redirect:list";
+		return "redirect:/patient/list";
 	}
+	
+	
 	
 	@RequestMapping(value="/edit", method = RequestMethod.POST)
 	@ResponseBody
@@ -58,9 +58,9 @@ public class PatientController {
 		
 	}
 	
-	@RequestMapping(value="/delete/{id}", method=RequestMethod.GET)
-	public String deletePatient(@PathVariable Integer id) {
-	//	ModelAndView modelAndView = new ModelAndView("add-patient-form");
+	@RequestMapping(value="/delete/{id}", method=RequestMethod.DELETE)
+	@ResponseBody
+	public String deletePatient(@PathVariable int id) {
 		patientService.deletePatient(id);
 		 return "redirect:/patient/list";
 	}
