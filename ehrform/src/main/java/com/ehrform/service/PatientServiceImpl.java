@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ehrform.dao.PatientDao;
 import com.ehrform.entity.Patient;
+import com.ehrform.servicehandler.PatientRepository;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -16,10 +16,10 @@ import com.google.gson.GsonBuilder;
 public class PatientServiceImpl implements PatientService {
 
 	@Autowired
-	private PatientDao patientDao;
+	private PatientRepository patientRepository;
 
 	public void addPatient(Patient patient) {
-		patientDao.addPatient(patient);
+		patientRepository.addPatient(patient);
 	}
 	
 	public void updatePatient(String json) {
@@ -35,18 +35,18 @@ public class PatientServiceImpl implements PatientService {
 			e.printStackTrace();
 		}
 		
-		patientDao.updatePatient(patient);
+		patientRepository.updatePatient(patient);
 	}
 
 	public Patient getPatient(int id) {
-		return patientDao.getPatient(id);
+		return patientRepository.getPatient(id).getPatient();
 	}
 	
 	public void deletePatient(int id) {
-		patientDao.deletePatient(id);
+		patientRepository.deletePatient(id);
 	}
 	public List<Patient> getPatient() {
-		List<Patient> patientsList = patientDao.getPatient();
+		List<Patient> patientsList = patientRepository.getAllPatients().getPatients();
 		
 		return patientsList;
 	}
